@@ -35,15 +35,15 @@ resource "okta_user" "pmdepr" {
   locale             = "en_US"
   mobile_phone       = "8602994883"
   nick_name          = "Pat"
-  postal_address     = "15 Pine Bluff Rd"
+  postal_address     = "15 Test St"
   preferred_language = "en-us"
-  primary_phone      = "8602994883"
-  state              = "MA"
-  street_address     = "15 Pine Bluff Rd."
+  primary_phone      = "8602998888"
+  state              = "OH"
+  street_address     = "15 Test St."
   timezone           = "America/New_York"
   title              = "Director"
   user_type          = "Employee"
-  zip_code           = "02631"
+  zip_code           = "02021"
 }
 
   resource "okta_user_group_memberships" "pmdepr" {
