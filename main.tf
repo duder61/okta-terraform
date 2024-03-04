@@ -11,7 +11,7 @@ provider "okta" {
   base_url = "okta.com"
   client_id   = "0oafb7z0umCDddkdb5d7"
   scopes = ["okta.groups.manage", "okta.groups.read","okta.users.manage"]
-  private_key = "C:\\Users\\Patrick Admin\\development\\terraform-providers\\terraform-provider-okta\\terraform_pkcs1.key"
+  private_key = "${secrets.PKCS1_KEY}"
 }
 
 resource "okta_group" "example_group" {
@@ -25,16 +25,16 @@ resource "okta_group" "aws_users" {
 
 resource "okta_user" "pmdepr" {
   first_name         = "Patrick"
-  last_name          = "DePratti"
-  login              = "pdepratti@pm.me"
-  email              = "pdepratti@pm.me"
-  city               = "Brewster"
+  last_name          = "Tester"
+  login              = "test@pm.me"
+  email              = "test@pm.me"
+  city               = "Test"
   country_code       = "US"
   department         = "IT"
-  display_name       = "Patrick DePratti"
+  display_name       = "Patrick Tester"
   locale             = "en_US"
-  mobile_phone       = "8602994883"
-  nick_name          = "Pat"
+  mobile_phone       = "602998888"
+  nick_name          = "Tester"
   postal_address     = "15 Test St"
   preferred_language = "en-us"
   primary_phone      = "8602998888"
